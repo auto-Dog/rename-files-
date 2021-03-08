@@ -1,0 +1,3 @@
+oriName.txt
+readme.txt
+rename.bat
