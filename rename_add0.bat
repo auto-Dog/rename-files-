@@ -13,9 +13,11 @@ set /p str2=输入通用文件命名格式（不含尾部数字）^:
 for %%i in (*.%str%) do (
 set /a a+=1
 if !a! gtr %c% (goto aa)
-echo !a!
-echo %%i 
-ren "%%i" "%str2%!a!.%str%"
+echo %%i
+set Num=000!a!
+set Num=!Num:~-3!
+echo !Num!
+ren "%%i" "%str2%!Num!.%str%"
 )
 :aa
 echo.
